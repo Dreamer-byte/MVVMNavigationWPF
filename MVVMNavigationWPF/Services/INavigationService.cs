@@ -9,7 +9,7 @@ namespace MVVMNavigationWPF.Services
 {
     public interface INavigationService
     {
-        ViewModel CurrenView { get; }
+        ViewModel CurrentView { get; }
 
         void NavigateTo<T> () where T : ViewModel;
     }

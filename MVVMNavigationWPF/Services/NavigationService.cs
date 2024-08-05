@@ -13,7 +13,7 @@ namespace MVVMNavigationWPF.Services
         private ViewModel _currentView;
         private readonly Func<Type,ViewModel> _viewModelFactory;
 
-        public ViewModel CurrenView 
+        public ViewModel CurrentView 
         {
             get=> _currentView; 
 
@@ -35,7 +35,7 @@ namespace MVVMNavigationWPF.Services
         public void NavigateTo<TViewModel>() where TViewModel : ViewModel
         {
             ViewModel viewModel = _viewModelFactory.Invoke(typeof(TViewModel));
-            CurrenView = viewModel;
+            CurrentView = viewModel;
         }
     }
 }

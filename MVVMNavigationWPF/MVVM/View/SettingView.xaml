@@ -9,6 +9,9 @@
              Background="#303030"
              >
     <Grid>
-            
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Settings" Foreground="White" FontSize="25" Margin="6 0 0 0" />
+            <Button Content="Home" FontSize="25" Margin="0 5 0 0" Command="{Binding NavigateToHomeCommand}"/>
+        </StackPanel>
     </Grid>
 </UserControl>

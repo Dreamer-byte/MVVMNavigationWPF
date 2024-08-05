@@ -19,17 +19,17 @@ namespace MVVMNavigationWPF.MVVM.ViewModel
         }
 
 
-        public RelayCommand NavigateToHomeComand { get; set; }
-        public RelayCommand NavigateToSettingComand { get; set; }
-
+        public RelayCommand NavigateToHomeCommand { get; set; }
+        public RelayCommand NavigateToSettingCommand { get; set; }
 
         public MainViewModel(INavigationService navService)
         {
 
             Navigation = navService;
-            NavigateToHomeComand = new RelayCommand(execute:(o)  => { Navigation.NavigateTo<HomeViewModel>(); },canExecute:(o)=>true);
-            NavigateToSettingComand = new RelayCommand(execute: (o) => { Navigation.NavigateTo<SettingsViewModel>(); }, canExecute: (o) => true);
+            NavigateToHomeCommand = new RelayCommand(execute:(o)  => { Navigation.NavigateTo<HomeViewModel>(); },canExecute:(o)=>true);
+            NavigateToSettingCommand = new RelayCommand(execute: (o) => { Navigation.NavigateTo<SettingsViewModel>(); }, canExecute: (o) => true);
 
         }
+        
     }
 }
